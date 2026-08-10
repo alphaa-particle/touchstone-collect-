@@ -1,0 +1,1105 @@
+{
+  "generator_version": "2.0.0",
+  "family": "grid_localisation",
+  "generated_ts": "2026-08-09T14:30:46+00:00",
+  "base_seed": 1000,
+  "practice": {
+    "family": "grid_localisation",
+    "n": 4,
+    "clues": [
+      "The circle is not in column C.",
+      "The circle is not touching the edge of the grid.",
+      "The circle is not in row 1 and not in row 2."
+    ],
+    "clue_kinds": [
+      "col",
+      "border",
+      "rows"
+    ],
+    "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+    "question": "Which box holds the circle?",
+    "solution": "B3",
+    "marker": null,
+    "column_options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "row_options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "n_clues": 3,
+    "n_constraints": 24,
+    "cells_total": 16,
+    "human_sweeps": 3,
+    "model_cell_checks": 48,
+    "asymmetry_ratio": 16,
+    "uniqueness_verified": 1,
+    "seed": 1145,
+    "difficulty_band": 0,
+    "instance_id": "PRAC01",
+    "generated_ts": "2026-08-09T14:30:46+00:00"
+  },
+  "canonical_set": [
+    "I0009",
+    "I0010",
+    "I0011",
+    "I0012",
+    "I0013",
+    "I0014"
+  ],
+  "instances": [
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in column C and not in column D.",
+        "The circle is not in row 3 and not in row 4.",
+        "The circle is not touching the edge of the grid."
+      ],
+      "clue_kinds": [
+        "cols",
+        "rows",
+        "border"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "B2",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 28,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1009,
+      "difficulty_band": 1,
+      "instance_id": "I0001",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in row 2.",
+        "The circle is not touching the edge of the grid.",
+        "The circle is not in column B."
+      ],
+      "clue_kinds": [
+        "row",
+        "border",
+        "col"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "C3",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 20,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1012,
+      "difficulty_band": 1,
+      "instance_id": "I0002",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not touching the edge of the grid.",
+        "The circle is not in column C.",
+        "The circle is not in row 3."
+      ],
+      "clue_kinds": [
+        "border",
+        "col",
+        "row"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "B2",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 20,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1021,
+      "difficulty_band": 1,
+      "instance_id": "I0003",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not touching the edge of the grid.",
+        "The circle is not in row 2.",
+        "The circle is not in column C."
+      ],
+      "clue_kinds": [
+        "border",
+        "row",
+        "col"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "B3",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 20,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1025,
+      "difficulty_band": 1,
+      "instance_id": "I0004",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in row 2 and not in row 4.",
+        "The circle is not touching the edge of the grid.",
+        "The circle is not in column A and not in column C."
+      ],
+      "clue_kinds": [
+        "rows",
+        "border",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "B3",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 28,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1033,
+      "difficulty_band": 1,
+      "instance_id": "I0005",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in row 3.",
+        "The circle is not in column A and not in column C.",
+        "The circle is not touching the edge of the grid."
+      ],
+      "clue_kinds": [
+        "row",
+        "cols",
+        "border"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "B2",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1039,
+      "difficulty_band": 1,
+      "instance_id": "I0006",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in column B.",
+        "The circle is not in row 3.",
+        "The circle is not touching the edge of the grid."
+      ],
+      "clue_kinds": [
+        "col",
+        "row",
+        "border"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "C2",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 20,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1040,
+      "difficulty_band": 1,
+      "instance_id": "I0007",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in column C.",
+        "The circle is not touching the edge of the grid.",
+        "The circle is not in row 3."
+      ],
+      "clue_kinds": [
+        "col",
+        "border",
+        "row"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "B2",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 3,
+      "n_constraints": 20,
+      "cells_total": 16,
+      "human_sweeps": 3,
+      "model_cell_checks": 48,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1057,
+      "difficulty_band": 1,
+      "instance_id": "I0008",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in column B and not in column D.",
+        "The circle is not in row 1 and not in row 4.",
+        "The circle is not in row 3.",
+        "The circle is not in column A."
+      ],
+      "clue_kinds": [
+        "cols",
+        "rows",
+        "row",
+        "col"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "C2",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1058,
+      "difficulty_band": 2,
+      "instance_id": "I0009",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in column B.",
+        "The circle is not in column A and not in column D.",
+        "The circle is not in row 2.",
+        "The circle is not in row 1 and not in row 4."
+      ],
+      "clue_kinds": [
+        "col",
+        "cols",
+        "row",
+        "rows"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "C3",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1061,
+      "difficulty_band": 2,
+      "instance_id": "I0010",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in row 1 and not in row 3.",
+        "The circle is not in the middle 4 boxes.",
+        "The circle is not in column C.",
+        "The circle is not in column A and not in column D."
+      ],
+      "clue_kinds": [
+        "rows",
+        "interior",
+        "col",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "B4",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1064,
+      "difficulty_band": 2,
+      "instance_id": "I0011",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in row 4.",
+        "The circle is not in column A and not in column C.",
+        "The circle is not in row 1 and not in row 2.",
+        "The circle is not in the middle 4 boxes."
+      ],
+      "clue_kinds": [
+        "row",
+        "cols",
+        "rows",
+        "interior"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "D3",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1066,
+      "difficulty_band": 2,
+      "instance_id": "I0012",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in the middle 4 boxes.",
+        "The circle is not in row 3.",
+        "The circle is not in column A and not in column B.",
+        "The circle is not in row 1 and not in row 4."
+      ],
+      "clue_kinds": [
+        "interior",
+        "row",
+        "cols",
+        "rows"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "D2",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1068,
+      "difficulty_band": 2,
+      "instance_id": "I0013",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in row 1 and not in row 3.",
+        "The circle is not in column B.",
+        "The circle is not on either diagonal of the grid.",
+        "The circle is not in column A and not in column D."
+      ],
+      "clue_kinds": [
+        "rows",
+        "col",
+        "diag",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "C4",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 28,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1069,
+      "difficulty_band": 2,
+      "instance_id": "I0014",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in column D.",
+        "The circle is not in row 1 and not in row 3.",
+        "The circle is not in the middle 4 boxes.",
+        "The circle is not in column A and not in column B."
+      ],
+      "clue_kinds": [
+        "col",
+        "rows",
+        "interior",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "C4",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1070,
+      "difficulty_band": 2,
+      "instance_id": "I0015",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 4,
+      "clues": [
+        "The circle is not in row 3.",
+        "The circle is not in column B.",
+        "The circle is not in column C and not in column D.",
+        "The circle is not in row 1 and not in row 2."
+      ],
+      "clue_kinds": [
+        "row",
+        "col",
+        "cols",
+        "rows"
+      ],
+      "preamble": "A circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.",
+      "question": "Which box holds the circle?",
+      "solution": "A4",
+      "marker": null,
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "n_clues": 4,
+      "n_constraints": 24,
+      "cells_total": 16,
+      "human_sweeps": 4,
+      "model_cell_checks": 64,
+      "asymmetry_ratio": 16,
+      "uniqueness_verified": 1,
+      "seed": 1071,
+      "difficulty_band": 2,
+      "instance_id": "I0016",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not in column A and not in column E.",
+        "The circle is not in the same row as the square.",
+        "The circle is not on either diagonal of the grid.",
+        "The circle is not in row 1.",
+        "The circle is not in row 3 and not in row 4."
+      ],
+      "clue_kinds": [
+        "cols",
+        "m_row",
+        "diag",
+        "row",
+        "rows"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box A5.",
+      "question": "Which box holds the circle?",
+      "solution": "C2",
+      "marker": "A5",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 39,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1076,
+      "difficulty_band": 3,
+      "instance_id": "I0017",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not in row 1 and not in row 3.",
+        "The circle is not in row 4 and not in row 5.",
+        "The circle is not in the same column as the square.",
+        "The circle is not in column D.",
+        "The circle is not in column A and not in column E."
+      ],
+      "clue_kinds": [
+        "rows",
+        "rows",
+        "m_col",
+        "col",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box C1.",
+      "question": "Which box holds the circle?",
+      "solution": "B2",
+      "marker": "C1",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 40,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1083,
+      "difficulty_band": 3,
+      "instance_id": "I0018",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not in row 4.",
+        "The circle is not in the same row as the square.",
+        "The circle is not touching the edge of the grid.",
+        "The circle is not in column C.",
+        "The circle is not in column B and not in column E."
+      ],
+      "clue_kinds": [
+        "row",
+        "m_row",
+        "border",
+        "col",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box E2.",
+      "question": "Which box holds the circle?",
+      "solution": "D3",
+      "marker": "E2",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 41,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1094,
+      "difficulty_band": 3,
+      "instance_id": "I0019",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not in column A and not in column D.",
+        "The circle is not in row 2 and not in row 3.",
+        "The circle is not in row 5.",
+        "The circle is not in the same row as the square.",
+        "The circle is not in column B and not in column C."
+      ],
+      "clue_kinds": [
+        "cols",
+        "rows",
+        "row",
+        "m_row",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box C4.",
+      "question": "Which box holds the circle?",
+      "solution": "E1",
+      "marker": "C4",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 40,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1096,
+      "difficulty_band": 3,
+      "instance_id": "I0020",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not in the same column as the square.",
+        "The circle is not in row 2 and not in row 4.",
+        "The circle is not in row 1 and not in row 3.",
+        "The circle is not in column C.",
+        "The circle is not in column B and not in column D."
+      ],
+      "clue_kinds": [
+        "m_col",
+        "rows",
+        "rows",
+        "col",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box A1.",
+      "question": "Which box holds the circle?",
+      "solution": "E5",
+      "marker": "A1",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 40,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1105,
+      "difficulty_band": 3,
+      "instance_id": "I0021",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not in row 2.",
+        "The circle is not in the same row as the square.",
+        "The circle is not on either diagonal of the grid.",
+        "The circle is not in column B and not in column D.",
+        "The circle is not in row 1 and not in row 3."
+      ],
+      "clue_kinds": [
+        "row",
+        "m_row",
+        "diag",
+        "cols",
+        "rows"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box C4.",
+      "question": "Which box holds the circle?",
+      "solution": "C5",
+      "marker": "C4",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 39,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1106,
+      "difficulty_band": 3,
+      "instance_id": "I0022",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not in column D.",
+        "The circle is not in row 4 and not in row 5.",
+        "The circle is not in the same column as the square.",
+        "The circle is not in row 1 and not in row 2.",
+        "The circle is not in column B and not in column E."
+      ],
+      "clue_kinds": [
+        "col",
+        "rows",
+        "m_col",
+        "rows",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box A3.",
+      "question": "Which box holds the circle?",
+      "solution": "C3",
+      "marker": "A3",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 40,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1109,
+      "difficulty_band": 3,
+      "instance_id": "I0023",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    },
+    {
+      "family": "grid_localisation",
+      "n": 5,
+      "clues": [
+        "The circle is not directly above, below, to the left of, or to the right of the square.",
+        "The circle is not in row 4 and not in row 5.",
+        "The circle is not in the same row as the square.",
+        "The circle is not in column C and not in column D.",
+        "The circle is not in column B and not in column E."
+      ],
+      "clue_kinds": [
+        "m_adj",
+        "rows",
+        "m_row",
+        "cols",
+        "cols"
+      ],
+      "preamble": "A circle is hidden in one box of a 5 by 5 grid. Columns are A, B, C, D, and E. Rows are 1, 2, 3, 4, and 5. A box is named by its column letter and then its row number, for example B3. There is also a square, and the square is in box A3.",
+      "question": "Which box holds the circle?",
+      "solution": "A1",
+      "marker": "A3",
+      "column_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "row_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "n_clues": 5,
+      "n_constraints": 38,
+      "cells_total": 25,
+      "human_sweeps": 5,
+      "model_cell_checks": 125,
+      "asymmetry_ratio": 25,
+      "uniqueness_verified": 1,
+      "seed": 1113,
+      "difficulty_band": 3,
+      "instance_id": "I0024",
+      "generated_ts": "2026-08-09T14:30:46+00:00"
+    }
+  ]
+}
