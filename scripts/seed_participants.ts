@@ -1,4 +1,4 @@
-/* Seeds P01..P24 and one session each, then prints the paper strips.
+/* Seeds P01..P200 and one session each, then prints the paper strips.
  *
  *   npx tsx scripts/seed_participants.ts > tokens.txt
  *
@@ -13,7 +13,7 @@ import { randomUUID } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
 import { BUNDLE_HASH } from '../lib/instances';
 
-const N = 24;
+const N = 200;
 
 /* createClient builds a realtime client and refuses to start on Node 20, which
    has no global WebSocket. These scripts speak REST only and never open a

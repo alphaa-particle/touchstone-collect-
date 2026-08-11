@@ -185,17 +185,17 @@ try {
   check('seed_participants.ts runs clean', seed.status === 0);
 
   const pc = await pg.query(`select count(*)::int n from participants`);
-  check('24 participants seeded', pc.rows[0].n === 24, `got ${pc.rows[0].n}`);
+  check('200 participants seeded', pc.rows[0].n === 200, `got ${pc.rows[0].n}`);
 
   const tk = await pg.query(`select count(distinct token)::int n from sessions`);
-  check('24 distinct tokens', tk.rows[0].n === 24, `got ${tk.rows[0].n}`);
+  check('200 distinct tokens', tk.rows[0].n === 200, `got ${tk.rows[0].n}`);
 
   const bo = await pg.query(
     `select block_order, count(*)::int n from sessions group by 1 order by 1`,
   );
   check(
-    'exactly 12 of each block_order',
-    bo.rows.length === 2 && bo.rows.every((r) => r.n === 12),
+    'exactly 100 of each block_order',
+    bo.rows.length === 2 && bo.rows.every((r) => r.n === 100),
     JSON.stringify(bo.rows),
   );
 
@@ -207,7 +207,7 @@ try {
   const tk2 = await pg.query(`select count(*)::int n from sessions`);
   check(
     'seed is re-runnable without minting new tokens',
-    seed2.status === 0 && tk2.rows[0].n === 24,
+    seed2.status === 0 && tk2.rows[0].n === 200,
     `sessions=${tk2.rows[0].n}`,
   );
 
