@@ -75,6 +75,22 @@ input[type="radio"]:focus-visible, input[type="checkbox"]:focus-visible {
   outline: 3px solid var(--focus); outline-offset: 3px;
 }
 
+.select-answer { display: block; }
+select {
+  display: block;
+  width: 100%;
+  max-width: 32rem;
+  min-height: 2.75rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--fg);
+  font: inherit;
+}
+select:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
 button {
   font-family: inherit;
   font-size: 1.15rem;
@@ -99,6 +115,17 @@ button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
   background: #f2efe9;
 }
 #status:empty { display: none; }
+
+dialog {
+  width: min(36rem, calc(100% - 2rem));
+  border: 3px solid var(--fg);
+  border-radius: 4px;
+  padding: 1.5rem;
+  color: var(--fg);
+  background: var(--bg);
+}
+dialog::backdrop { background: rgb(0 0 0 / 55%); }
+dialog h2 { margin-top: 0; }
 
 .meta { font-size: 1rem; color: var(--meta); }
 

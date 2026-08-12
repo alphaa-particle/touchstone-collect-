@@ -6,7 +6,7 @@
    before this build started. The structure below is not a style choice; each
    piece maps to a numbered invariant in AGENT_BUILD_SPEC.md §2.
 
-     consent -> intro -> practice -> block A -> rating -> block B -> rating -> done
+     consent -> profile -> intro -> practice -> block A -> rating -> block B -> rating -> done
 
    Per item:  IDLE (heading + one Start button; challenge NOT in the DOM)
                 -> ACTIVE (challenge rendered, focus moved to the item heading)
@@ -105,7 +105,153 @@ type Live = {
   first_pointer_perf: number | null;
 };
 
-type Screen = 'consent' | 'intro' | 'flow' | 'done';
+type Screen = 'consent' | 'profile' | 'intro' | 'flow' | 'done';
+
+const PROFILE_FIELDS = [
+  {
+    name: 'blindness_onset',
+    label: 'When did your blindness begin?',
+    options: [
+      ['congenital', 'Congenital — from birth'],
+      ['early_onset', 'Early-onset — after birth but before age 18'],
+      ['acquired', 'Acquired — at age 18 or later'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'age_at_vision_loss',
+    label: 'Approximately how old were you when you became blind?',
+    options: [
+      ['from_birth', 'From birth'],
+      ['age_1_5', '1 to 5'],
+      ['age_6_12', '6 to 12'],
+      ['age_13_17', '13 to 17'],
+      ['age_18_25', '18 to 25'],
+      ['age_26_40', '26 to 40'],
+      ['age_41_60', '41 to 60'],
+      ['age_61_plus', '61 or older'],
+      ['not_sure', 'Not sure'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'primary_language',
+    label: 'What is your primary language?',
+    options: [
+      ['english', 'English'],
+      ['hindi', 'Hindi'],
+      ['other', 'Another language'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'language_proficiency',
+    label: 'How would you describe your proficiency in the language used in this study?',
+    options: [
+      ['basic', 'Basic'],
+      ['intermediate', 'Intermediate'],
+      ['advanced', 'Advanced'],
+      ['fluent', 'Fluent'],
+      ['native', 'Native or first-language proficiency'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'education_level',
+    label: 'What is the highest level of education you have completed?',
+    options: [
+      ['below_secondary', 'Below secondary school'],
+      ['secondary', 'Secondary school'],
+      ['higher_secondary', 'Higher secondary school'],
+      ['undergraduate', 'Undergraduate degree'],
+      ['postgraduate', 'Postgraduate degree'],
+      ['other', 'Other'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'captcha_familiarity',
+    label: 'How familiar are you with CAPTCHA or “I am not a robot” checks?',
+    options: [
+      ['never', 'Never used one'],
+      ['slightly', 'Slightly familiar'],
+      ['moderately', 'Moderately familiar'],
+      ['very', 'Very familiar'],
+      ['extremely', 'Extremely familiar'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'screen_reader_frequency',
+    label: 'How often do you use a screen reader?',
+    options: [
+      ['never', 'Never'],
+      ['less_than_weekly', 'Less than once a week'],
+      ['weekly', 'At least once a week'],
+      ['most_days', 'Most days'],
+      ['daily', 'Every day'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'computer_proficiency',
+    label: 'How would you rate your computer or smartphone proficiency?',
+    options: [
+      ['1', '1 — Beginner'],
+      ['2', '2 — Basic'],
+      ['3', '3 — Intermediate'],
+      ['4', '4 — Advanced'],
+      ['5', '5 — Expert'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+  {
+    name: 'primary_input_method',
+    label: 'What is your primary input method?',
+    options: [
+      ['keyboard', 'Keyboard'],
+      ['touch_gestures', 'Touch gestures'],
+      ['braille_keyboard', 'Braille keyboard or display'],
+      ['voice', 'Voice input'],
+      ['other', 'Other'],
+      ['prefer_not_to_say', 'Prefer not to say'],
+    ],
+  },
+] as const;
+
+const CONDITION_MEASURES = [
+  {
+    name: 'difficulty',
+    label: 'Overall, how difficult did you find this task?',
+    options: ['Very easy', 'Easy', 'Neither easy nor hard', 'Hard', 'Very hard'],
+  },
+  {
+    name: 'mental_effort',
+    label: 'How much mental effort did this task require?',
+    options: ['Very low', 'Low', 'Moderate', 'High', 'Very high'],
+  },
+  {
+    name: 'frustration',
+    label: 'How frustrated did you feel during this task?',
+    options: ['Not at all', 'Slightly', 'Moderately', 'Very', 'Extremely'],
+  },
+  {
+    name: 'perceived_accessibility',
+    label: 'How accessible was this task with your assistive technology?',
+    options: [
+      'Not accessible at all',
+      'Slightly accessible',
+      'Moderately accessible',
+      'Very accessible',
+      'Completely accessible',
+    ],
+  },
+  {
+    name: 'ease_of_navigation',
+    label: 'How easy was it to navigate and enter your answer?',
+    options: ['Very difficult', 'Difficult', 'Neither difficult nor easy', 'Easy', 'Very easy'],
+  },
+] as const;
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
 
@@ -123,12 +269,17 @@ export default function Runner({
   const [phase, setPhase] = useState<'idle' | 'active'>('idle');
   const [status, setStatus] = useState('');
   const [connected, setConnected] = useState(false);
+  const [wrongAnswer, setWrongAnswer] = useState('');
 
   const anchorRef = useRef<Anchor | null>(null);
   const liveRef = useRef<Live | null>(null);
   const hiddenAt = useRef<number | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const cluesRef = useRef<HTMLHeadingElement | null>(null);
+  const wrongDialogRef = useRef<HTMLDialogElement | null>(null);
+  const wrongHeadingRef = useRef<HTMLHeadingElement | null>(null);
+  const wrongReturnFocusRef = useRef<HTMLElement | null>(null);
+  const advanceAfterWrongRef = useRef(false);
   const queueRef = useRef<Queue | null>(null);
   const evBuf = useRef<EventPayload[]>([]);
   const evSeq = useRef(0);
@@ -268,6 +419,37 @@ export default function Runner({
 
   const say = (m: string) => setStatus(m);
 
+  useEffect(() => {
+    const dialog = wrongDialogRef.current;
+    if (!wrongAnswer || !dialog || dialog.open) return;
+    wrongReturnFocusRef.current = document.activeElement as HTMLElement | null;
+    dialog.showModal();
+    wrongHeadingRef.current?.focus();
+  }, [wrongAnswer]);
+
+  const showWrongAnswer = (moveOn = false) => {
+    const left = MAX_ATTEMPTS - liveRef.current!.attempts;
+    advanceAfterWrongRef.current = moveOn;
+    setStatus('');
+    setWrongAnswer(
+      moveOn
+        ? 'Your answer was incorrect and you have used all three attempts. Close this message to move to the next task.'
+        : `Your answer was incorrect. You have ${left} more ${left === 1 ? 'try' : 'tries'}. Close this message, change your answer, and submit again.`,
+    );
+  };
+
+  const closeWrongAnswer = () => wrongDialogRef.current?.close();
+
+  const afterWrongAnswer = () => {
+    setWrongAnswer('');
+    if (advanceAfterWrongRef.current) {
+      advanceAfterWrongRef.current = false;
+      advance();
+      return;
+    }
+    wrongReturnFocusRef.current?.focus();
+  };
+
   // ------------------------------------------------------------- trial write
   const recordTrial = (o: {
     correct: 0 | 1 | null;
@@ -377,17 +559,8 @@ export default function Runner({
       say('Correct.');
       setTimeout(advance, 900);
     } else {
-      say('That was not right. Moving on to the next puzzle.');
-      setTimeout(advance, 1400);
+      showWrongAnswer(true);
     }
-  };
-
-  const triesLeftMessage = () => {
-    const left = MAX_ATTEMPTS - liveRef.current!.attempts;
-    say(
-      `Not right. You have ${left} more ${left === 1 ? 'try' : 'tries'}. ` +
-        `You can change your answer and submit again.`,
-    );
   };
 
   const skip = () => {
@@ -536,13 +709,12 @@ export default function Runner({
     }
     if (live.attempts >= MAX_ATTEMPTS) {
       recordTrial({ correct: 0, gave_up: 0, submit_perf, notes: null });
-      say('That was not right. Moving on to the next puzzle.');
-      setTimeout(advance, 1400);
+      showWrongAnswer(true);
       return;
     }
     const g = (window as unknown as { grecaptcha?: { reset?: (id?: number) => void } }).grecaptcha;
     if (g?.reset && widgetRef.current !== null) g.reset(widgetRef.current);
-    triesLeftMessage();
+    showWrongAnswer();
   };
 
   // ============================================================ grid grading
@@ -586,7 +758,7 @@ export default function Runner({
 
     if (correct) return settle(1, 0);
     if (live.attempts >= MAX_ATTEMPTS) return settle(0, 0);
-    triesLeftMessage();
+    showWrongAnswer();
   };
 
   // ================================================================== render
@@ -608,8 +780,9 @@ export default function Runner({
           reason, and you do not have to give a reason.
         </p>
         <p tabIndex={0}>
-          We record only how long each puzzle takes and whether the answer was right.
-          No name, no contact detail, no recording of you.
+          We record how long each puzzle takes, whether the answer was right, your task
+          ratings, and non-identifying background information about vision, education,
+          language and technology use. No name, no contact detail, no recording of you.
         </p>
         <fieldset>
           <legend tabIndex={0}>Consent</legend>
@@ -635,13 +808,59 @@ export default function Runner({
               return;
             }
             logEvent('consent');
-            setScreen('intro');
-            mark('intro', 0);
+            setScreen('profile');
+            mark('profile', 0);
           }}
         >
           Continue
         </button>
         {!connected ? <p className="meta">Connecting to the server.</p> : null}
+      </>
+    );
+  } else if (screen === 'profile') {
+    body = (
+      <>
+        {h2('About you')}
+        <p tabIndex={0}>
+          These questions help us understand whether different backgrounds and ways of
+          using technology affect the results. Choose “Prefer not to say” whenever you
+          do not wish to answer.
+        </p>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const form = new FormData(e.currentTarget);
+            logEvent(
+              'participant_profile',
+              Object.fromEntries(
+                PROFILE_FIELDS.map(({ name }) => [name, String(form.get(name))]),
+              ),
+            );
+            flushEvents();
+            setScreen('intro');
+            mark('intro', 0);
+          }}
+        >
+          {PROFILE_FIELDS.map(({ name, label, options }) => (
+            <fieldset key={name}>
+              <legend tabIndex={0}>{label}</legend>
+              <label className="select-answer" htmlFor={name}>
+                Choose one answer
+                <select id={name} name={name} required defaultValue="">
+                  <option value="" disabled>
+                    Select an option
+                  </option>
+                  {options.map(([value, text]) => (
+                    <option key={value} value={value}>
+                      {text}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </fieldset>
+          ))}
+          <button type="submit">Continue</button>
+        </form>
       </>
     );
   } else if (screen === 'intro') {
@@ -674,45 +893,48 @@ export default function Runner({
       </>
     );
   } else if (screen === 'flow' && slot?.kind === 'rating') {
-    const scale: [number, string][] = [
-      [1, 'Very easy'],
-      [2, 'Easy'],
-      [3, 'Neither easy nor hard'],
-      [4, 'Hard'],
-      [5, 'Very hard'],
-    ];
     body = (
       <>
-        {h2('One question about those puzzles')}
+        {h2('Questions about this task')}
         <form
-          noValidate
           onSubmit={(e) => {
             e.preventDefault();
-            const v = new FormData(e.currentTarget).get('diff') as string | null;
-            if (!v) {
-              say('Please choose one of the five options.');
-              return;
-            }
+            const form = new FormData(e.currentTarget);
             logEvent('difficulty_rating', {
-              value: Number(v),
+              value: Number(form.get('difficulty')),
               condition: slot.condition,
+              mental_effort: Number(form.get('mental_effort')),
+              frustration: Number(form.get('frustration')),
+              perceived_accessibility: Number(form.get('perceived_accessibility')),
+              ease_of_navigation: Number(form.get('ease_of_navigation')),
             });
             flushEvents();
             advance();
           }}
         >
-          <fieldset>
-            <legend id="dq" tabIndex={0}>Overall, how difficult did you find them?</legend>
-            <div role="radiogroup" aria-labelledby="dq">
-              {scale.map(([v, label]) => (
-                <span className="opt" key={v}>
-                  <label htmlFor={`d${v}`}>
-                    <input type="radio" name="diff" id={`d${v}`} value={v} /> {v} — {label}
-                  </label>
-                </span>
-              ))}
-            </div>
-          </fieldset>
+          {CONDITION_MEASURES.map((measure) => (
+            <fieldset key={measure.name}>
+              <legend tabIndex={0}>{measure.label}</legend>
+              {measure.options.map((label, index) => {
+                const value = index + 1;
+                const id = `${measure.name}-${value}`;
+                return (
+                  <span className="opt" key={id}>
+                    <label htmlFor={id}>
+                      <input
+                        type="radio"
+                        name={measure.name}
+                        id={id}
+                        value={value}
+                        required
+                      />{' '}
+                      {value} — {label}
+                    </label>
+                  </span>
+                );
+              })}
+            </fieldset>
+          ))}
           <button type="submit">Continue</button>
         </form>
       </>
@@ -902,6 +1124,23 @@ export default function Runner({
 
         <div key={stepKey}>{body}</div>
       </main>
+      <dialog
+        ref={wrongDialogRef}
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="wrong-answer-title"
+        aria-describedby="wrong-answer-message wrong-answer-help"
+        onClose={afterWrongAnswer}
+      >
+        <h2 id="wrong-answer-title" ref={wrongHeadingRef} tabIndex={-1}>
+          Incorrect answer
+        </h2>
+        <p id="wrong-answer-message">{wrongAnswer}</p>
+        <p id="wrong-answer-help">Press Escape or select the button below to close this message.</p>
+        <button type="button" onClick={closeWrongAnswer}>
+          {advanceAfterWrongRef.current ? 'Close and continue' : 'Close and try again'}
+        </button>
+      </dialog>
     </>
   );
 }
