@@ -1,0 +1,12 @@
+check,value
+raw_rows,130
+unique_trial_pk,130
+participant_ids,21
+session_ids,21
+duplicate_extra_rows,3
+duplicate_sessions,2
+excluded_rows,0
+clock_suspect_rows,0
+tab_away_rows,1
+blank_trial_id_rows,130
+time_decomposition_mismatches_gt_0_01s,0

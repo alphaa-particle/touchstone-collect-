@@ -1,0 +1,3 @@
+condition,session_successes,session_denominator,session_success_percent,wilson_95ci_low_percent,wilson_95ci_high_percent,trial_rows,trial_correct,trial_correct_percent,trial_time_median_s,trial_time_q1_s,trial_time_q3_s
+Prototype: all six correct,14,18,77.77777777777777,54.785415683787384,90.99907189139833,108,103,95.37037037037037,72.2525,44.228750000000005,125.55000000000001
+Baseline: challenge completed,4,19,21.05263157894737,8.507676632916251,43.33427844381418,19,4,21.052631578947366,11.288,7.208,17.513

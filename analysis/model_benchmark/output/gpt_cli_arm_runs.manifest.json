@@ -1,0 +1,2666 @@
+{
+  "harness_version": "gpt_subscription_blind_v1",
+  "cli_version": "codex-cli 0.153.4",
+  "inputs_sha256": "cfded28761fd8c34a9cfc630610edefc7fee63d912caedf051dab480bd652e70",
+  "models": [
+    "gpt-5.6-luna",
+    "gpt-5.6-terra",
+    "gpt-5.6-sol"
+  ],
+  "catalog_sha256": "90225d94d329efe4084cb86353bde86b3d67097e5ca0406e17642195a27c81e9",
+  "replicates": 5,
+  "workers": 3,
+  "source_sha256": {
+    "gpt_transport.py": "a1efd205552f85ca31c2877ea2646c4d12012901f88e7ce756309aee9382349b",
+    "gpt_wire_audit.py": "70c5adbee28c923eaafd60138a069e8803083cd344d40fa3c9b8920b38679e65",
+    "run_gpt_cli_arm.py": "298e5e9ebf273a0355b84f44ea1e168f946f9aeaae27cee81184a23a99667b13"
+  },
+  "plan": [
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 1
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 2
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 3
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 4
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "thinking_off",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_low",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "effort_high",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0009",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0010",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0011",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0012",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0013",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-luna",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-terra",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 5
+    },
+    {
+      "model_alias": "gpt-5.6-sol",
+      "condition": "control_no_clues",
+      "instance_id": "I0014",
+      "replicate": 5
+    }
+  ],
+  "manifest_id": "aa921ccf922b954acd2b9c9a79a10610393d7d7e5ffe8173ddc2091257012c26",
+  "created_at": "2026-09-10T06:58:45.885481+00:00",
+  "authentication": "chatgpt",
+  "preflight": {
+    "wire_audits": [
+      {
+        "model": "gpt-5.6-luna",
+        "effort": "none",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "4d96e14950bce18bead31bddb119773012f51902fbce276500cd4ab0ca4549c8"
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "effort": "low",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "4cea2f4f307caca4405a534002f471082657060eeb74b2c67137eb874e1a41d2"
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "effort": "high",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "80bf6d0687b6741d407c0be4f3fc4c94c9ba5e063c9387c9b6b99f01ccf98c4e"
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "effort": "none",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "7d37350efe0a8dcbbbaec1c6a0e5012fdb3c4574161e0c65109d1778e8699135"
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "effort": "low",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "a58cc8e0cb76d6e75527784d48f3d0084e14361efaf9cbcb3c5aa619bbe1225f"
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "effort": "high",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "f9f22048f8ebe687d2344404fa5f4e0ab83deac60ead035dbd4e7fcc643da712"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "effort": "none",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "08d7f7254bdf46beedf2edfa4dfe07e7a891d6ed58dfac3875b3d2252b894f49"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "effort": "low",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "76a21a90c87643c97a8d55221015d6fc26e21b87c5a517e0f86be20924244bcf"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "effort": "high",
+        "tools": [],
+        "input_messages": 2,
+        "system_matches": true,
+        "user_matches": true,
+        "no_previous_response": true,
+        "request_sha256": "bf7f86d110f6fa70d09381a8000b5bc3fd15f78caaea7db73676074ca3c88474"
+      }
+    ],
+    "subscription_probes": [
+      {
+        "model": "gpt-5.6-luna",
+        "effort": "none",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1c-a3ba-73c3-9c5c-de86db80bf81",
+        "wall_ms": 9111.104666000001,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1c-a3ba-73c3-9c5c-de86db80bf81"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "effort": "low",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1c-d04d-7231-a404-bb39b2923897",
+        "wall_ms": 4675.575125,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1c-d04d-7231-a404-bb39b2923897"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "effort": "high",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1c-e92b-7a70-ab56-5acbf36347e0",
+        "wall_ms": 4613.770000000002,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1c-e92b-7a70-ab56-5acbf36347e0"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "effort": "none",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1d-029a-76d2-99ab-23364bf1ec93",
+        "wall_ms": 4812.983750000001,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1d-029a-76d2-99ab-23364bf1ec93"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "effort": "low",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1d-1cc5-7a62-b318-238b9b8889bc",
+        "wall_ms": 4838.224249999996,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1d-1cc5-7a62-b318-238b9b8889bc"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "effort": "high",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1d-36c9-7b21-b6e6-5f0f3c173f39",
+        "wall_ms": 5619.242792000002,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1d-36c9-7b21-b6e6-5f0f3c173f39"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "effort": "none",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1d-5371-7871-a951-9f0c19108b4f",
+        "wall_ms": 4823.064667000004,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1d-5371-7871-a951-9f0c19108b4f"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "effort": "low",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1d-6cc0-7e63-a520-5f86e4e00794",
+        "wall_ms": 5269.909499999997,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1d-6cc0-7e63-a520-5f86e4e00794"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "effort": "high",
+        "text": "READY",
+        "usage": {
+          "input_tokens": 30,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5,
+          "reasoning_output_tokens": 0
+        },
+        "num_turns": 1,
+        "tool_events": 0,
+        "thread_id": "01a08a1d-888c-7ab3-8efb-50890cd534b9",
+        "wall_ms": 5568.840666999997,
+        "events": [
+          {
+            "type": "thread.started",
+            "thread_id": "01a08a1d-888c-7ab3-8efb-50890cd534b9"
+          },
+          {
+            "type": "turn.started"
+          },
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "agent_message",
+              "text": "READY"
+            }
+          },
+          {
+            "type": "turn.completed",
+            "usage": {
+              "input_tokens": 30,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5,
+              "reasoning_output_tokens": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

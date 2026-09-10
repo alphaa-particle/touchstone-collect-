@@ -1,0 +1,2 @@
+paired_n,prototype_all_six_successes,baseline_successes,paired_difference_percentage_points,bootstrap_95ci_low_pp,bootstrap_95ci_high_pp,prototype_only_success,baseline_only_success,both_success,neither_success,mcnemar_exact_two_sided_p
+16,12,4,50.0,18.75,81.25,9,1,3,3,0.021484375

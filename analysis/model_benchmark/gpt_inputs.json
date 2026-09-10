@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "system": "You are solving a website verification puzzle.\n\nA circle is hidden in one box of a grid. Each clue tells you where the circle is not. Rule out boxes until only one is left.\n\nA box is named by its column letter and then its row number. B3 means column B, row 3.\n\nAnswer with the box name only: one column letter followed by one row number, for example B3. End your reply with a line of the form \"ANSWER: <box>\".\n\nGive the answer line at the end of your reply.",
+  "items": [
+    {
+      "instance_id": "PRAC01",
+      "is_practice": true,
+      "n": 4,
+      "prompt": "Practice puzzle\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n1. The circle is not in column C.\n2. The circle is not touching the edge of the grid.\n3. The circle is not in row 1 and not in row 2.\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4",
+      "control_prompt": "Practice puzzle\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n(none provided)\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4"
+    },
+    {
+      "instance_id": "I0009",
+      "is_practice": false,
+      "n": 4,
+      "prompt": "Puzzle 1 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n1. The circle is not in column B and not in column D.\n2. The circle is not in row 1 and not in row 4.\n3. The circle is not in row 3.\n4. The circle is not in column A.\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4",
+      "control_prompt": "Puzzle 1 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n(none provided)\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4"
+    },
+    {
+      "instance_id": "I0010",
+      "is_practice": false,
+      "n": 4,
+      "prompt": "Puzzle 2 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n1. The circle is not in column B.\n2. The circle is not in column A and not in column D.\n3. The circle is not in row 2.\n4. The circle is not in row 1 and not in row 4.\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4",
+      "control_prompt": "Puzzle 2 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n(none provided)\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4"
+    },
+    {
+      "instance_id": "I0011",
+      "is_practice": false,
+      "n": 4,
+      "prompt": "Puzzle 3 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n1. The circle is not in row 1 and not in row 3.\n2. The circle is not in the middle 4 boxes.\n3. The circle is not in column C.\n4. The circle is not in column A and not in column D.\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4",
+      "control_prompt": "Puzzle 3 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n(none provided)\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4"
+    },
+    {
+      "instance_id": "I0012",
+      "is_practice": false,
+      "n": 4,
+      "prompt": "Puzzle 4 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n1. The circle is not in row 4.\n2. The circle is not in column A and not in column C.\n3. The circle is not in row 1 and not in row 2.\n4. The circle is not in the middle 4 boxes.\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4",
+      "control_prompt": "Puzzle 4 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n(none provided)\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4"
+    },
+    {
+      "instance_id": "I0013",
+      "is_practice": false,
+      "n": 4,
+      "prompt": "Puzzle 5 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n1. The circle is not in the middle 4 boxes.\n2. The circle is not in row 3.\n3. The circle is not in column A and not in column B.\n4. The circle is not in row 1 and not in row 4.\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4",
+      "control_prompt": "Puzzle 5 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n(none provided)\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4"
+    },
+    {
+      "instance_id": "I0014",
+      "is_practice": false,
+      "n": 4,
+      "prompt": "Puzzle 6 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n1. The circle is not in row 1 and not in row 3.\n2. The circle is not in column B.\n3. The circle is not on either diagonal of the grid.\n4. The circle is not in column A and not in column D.\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4",
+      "control_prompt": "Puzzle 6 of 6\n\nA circle is hidden in one box of a 4 by 4 grid. Columns are A, B, C, and D. Rows are 1, 2, 3, and 4. A box is named by its column letter and then its row number, for example B3.\n\nClues\n(none provided)\n\nWhich box holds the circle?\nChoose the column, then the row, then select Submit.\n\nColumn: A, B, C, D\nRow: 1, 2, 3, 4"
+    }
+  ]
+}

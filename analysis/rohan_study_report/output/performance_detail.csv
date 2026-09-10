@@ -1,0 +1,6 @@
+measure,numerator,denominator,percent
+prototype trial first-attempt correct,82,108,75.92592592592592
+prototype trial eventually correct,103,108,95.37037037037037
+prototype trial gave up,2,108,1.8518518518518516
+baseline challenge completed,4,19,21.052631578947366
+baseline gave up,15,19,78.94736842105263

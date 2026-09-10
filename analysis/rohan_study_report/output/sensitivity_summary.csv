@@ -1,0 +1,2 @@
+analysis,paired_n,prototype_all_six_successes,baseline_successes,prototype_only_success,baseline_only_success,mcnemar_exact_two_sided_p
+exclude sessions with repeated submissions,14,11,2,9,0,0.00390625
