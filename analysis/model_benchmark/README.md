@@ -7,6 +7,14 @@ dollars per successful solve, across Claude Haiku 4.5, Sonnet 5 and Opus 5.
 Read **`MODEL_BENCHMARK_REPORT.md`** for the design, the human baseline, the results section,
 and the difficulties log. This file is just the runbook.
 
+For the completed cross-model analysis, read
+[COMPARATIVE_BENCHMARK_REPORT.md](COMPARATIVE_BENCHMARK_REPORT.md). It compares
+all 720 completed Claude/GPT subscription sessions, documents methodological
+limitations and sensitivity checks, and embeds eight PNG figures. Reproducible
+offline analysis scripts, aggregate data and figures are in `publication/`;
+Appendix C gives the commands. The comparative report distinguishes the measured
+subscription arms from the separate API design below.
+
 ## Run
 
 ```bash

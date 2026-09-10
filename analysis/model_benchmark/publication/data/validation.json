@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "source_files_verified": 23,
+  "completed_model_sessions": 720,
+  "clue_correct": 510,
+  "marker_required_clue_correct": 507,
+  "control_correct": 1,
+  "numbered_tables": 25,
+  "png_figures": 8,
+  "local_links_verified": 48,
+  "report_sha256": "057c4c75a48d7dfae02a26ba364eb5f4d7364547e40d76d41bf1ec0007804f15",
+  "validator_sha256": "a89a9a05abaa60eb344297f5499f4d9d27b3dbcaafbd16931d9d0d50bf0d442f",
+  "figures": [
+    {
+      "file": "publication/figures/01_accuracy_by_effort.png",
+      "sha256": "7f8c0ee5314bf562e7bdd370695c2b660902a4704f56c3d63e61c3abdfc25ff9"
+    },
+    {
+      "file": "publication/figures/02_thinking_off_item_accuracy.png",
+      "sha256": "1d42ac68023dc8e1c5db6d9e322314a4631c67b58728b6bb9ff6b3dca07e6b38"
+    },
+    {
+      "file": "publication/figures/03_output_token_distributions.png",
+      "sha256": "033aff46402dced0e899ddbb509869b61dc29b7662b942bb32f1c546d85ee2d7"
+    },
+    {
+      "file": "publication/figures/04_visible_response_lengths.png",
+      "sha256": "59647845c5dd5d9d8552504e0316ce91d4007283032e586d57d25e66b9b1299a"
+    },
+    {
+      "file": "publication/figures/05_wall_latency_distributions.png",
+      "sha256": "dd3e7a43896fa8a46f6766d4dc5dcbc3306e5e4262624600f33ad779878dcab7"
+    },
+    {
+      "file": "publication/figures/07_low_high_resource_contrast.png",
+      "sha256": "68f05cbc23ae9ac3033b05e2e86df569be4c47d7d747ccaba2ca1f981627201f"
+    },
+    {
+      "file": "publication/figures/06_no_clue_response_distribution.png",
+      "sha256": "6778043b577fc89246a813092b4e32584d735108e65db38be1c0089346c6a1cd"
+    },
+    {
+      "file": "publication/figures/08_human_context.png",
+      "sha256": "ca657e5c3cf01817070b5d9739ffb1abd68d9556682103374c2085de10e95989"
+    }
+  ],
+  "visual_review": "All eight plots inspected; model labels and the effort legend corrected before final validation."
+}

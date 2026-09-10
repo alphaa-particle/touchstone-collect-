@@ -1,0 +1,66 @@
+[
+  {
+    "file": "01_accuracy_by_effort.png",
+    "question": "Which conditions solved the fixed test set?",
+    "grain": "Model \u00d7 condition (n=30)",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Intervals assume Bernoulli sampling and do not capture item clustering or new-item generalization."
+  },
+  {
+    "file": "02_thinking_off_item_accuracy.png",
+    "question": "Where did errors concentrate?",
+    "grain": "Model \u00d7 item, thinking off (n=5)",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Fixed items; no uncertainty claim from five repetitions."
+  },
+  {
+    "file": "03_output_token_distributions.png",
+    "question": "How does output_tokens vary across models and effort?",
+    "grain": "Model \u00d7 condition; distributions of 30 sessions",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Output tokens are provider-specific telemetry; visible text excludes hidden reasoning; wall includes startup/transport, with unequal concurrency."
+  },
+  {
+    "file": "05_wall_latency_distributions.png",
+    "question": "How does wall_ms vary across models and effort?",
+    "grain": "Model \u00d7 condition; distributions of 30 sessions",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Output tokens are provider-specific telemetry; visible text excludes hidden reasoning; wall includes startup/transport, with unequal concurrency."
+  },
+  {
+    "file": "04_visible_response_lengths.png",
+    "question": "How does visible_characters vary across models and effort?",
+    "grain": "Model \u00d7 condition; distributions of 30 sessions",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Output tokens are provider-specific telemetry; visible text excludes hidden reasoning; wall includes startup/transport, with unequal concurrency."
+  },
+  {
+    "file": "06_no_clue_response_distribution.png",
+    "question": "Do controls behave like uniform random guessing?",
+    "grain": "Model \u00d7 submitted cell, no-clue control (n=30/model)",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Control correctness depends on target distribution and response bias; passing a threshold does not prove no leakage."
+  },
+  {
+    "file": "07_low_high_resource_contrast.png",
+    "question": "Did high effort improve observed accuracy or change resource use?",
+    "grain": "Model \u00d7 condition median; high/low descriptive ratio",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Ratios of medians are descriptive, not paired treatment effects; model effort settings are not standardized compute budgets."
+  },
+  {
+    "file": "08_human_context.png",
+    "question": "What human evidence contextualizes this model benchmark?",
+    "grain": "Human item aggregate (n=18/item); human_item_context.csv",
+    "source": "publication/data/condition_summary.csv and model_trials.csv unless stated",
+    "filters": "Completed sessions only; controls excluded unless explicitly shown",
+    "uncertainty": "Whiskers are IQR, not confidence intervals. Repeated participants and fixed order preclude an independent human/model speed comparison."
+  }
+]

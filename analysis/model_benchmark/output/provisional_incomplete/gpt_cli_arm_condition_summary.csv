@@ -1,0 +1,13 @@
+model_alias,condition,sessions,correct,solve_rate_percent,mean_attempts,median_output_tokens,median_thinking_tokens,median_input_tokens_including_harness,median_cached_input_tokens,median_api_latency_s,median_wall_latency_s,parse_failures,enumeration_percent,median_cells_named,output_tokens_per_solve,wall_latency_s_per_solve,cost_per_solve_usd
+gpt-5.6-luna,thinking_off,30,18,60.0,1,8.0,0.0,291.0,0.0,,5.13,0,0.0,1.0,13.33,9.85,
+gpt-5.6-luna,effort_low,24,24,100.0,1,81.5,71.5,291.0,0.0,,6.32,0,0.0,1.0,83.96,6.33,
+gpt-5.6-luna,effort_high,24,24,100.0,1,151.5,140.5,291.0,0.0,,7.63,0,0.0,1.0,137.12,7.85,
+gpt-5.6-luna,control_no_clues,24,0,0.0,1,122.5,112.5,240.0,0.0,,7.25,0,0.0,1.0,,,
+gpt-5.6-terra,thinking_off,29,18,62.07,1,11.0,0.0,291.0,0.0,,5.11,0,0.0,1,17.28,8.64,
+gpt-5.6-terra,effort_low,24,24,100.0,1,62.5,49.5,291.0,0.0,,6.06,0,0.0,1.0,48.25,5.98,
+gpt-5.6-terra,effort_high,24,24,100.0,1,74.0,62.5,291.0,0.0,,6.44,0,0.0,1.0,69.0,6.46,
+gpt-5.6-terra,control_no_clues,24,0,0.0,1,132.0,120.5,240.0,0.0,,8.59,0,0.0,1.0,,,
+gpt-5.6-sol,thinking_off,29,24,82.76,1,11.0,0.0,291.0,0.0,,5.74,0,0.0,1,11.54,7.05,
+gpt-5.6-sol,effort_low,24,24,100.0,1,66.5,53.5,291.0,0.0,,7.31,0,0.0,1.0,58.21,6.94,
+gpt-5.6-sol,effort_high,24,24,100.0,1,117.5,107.5,291.0,0.0,,9.11,0,0.0,1.0,93.42,8.43,
+gpt-5.6-sol,control_no_clues,24,0,0.0,1,231.0,221.0,240.0,0.0,,13.75,1,0.0,1.0,,,

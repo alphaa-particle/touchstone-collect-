@@ -1,0 +1,7 @@
+instance_id,answer,clue_type,clue_1,clue_2,clue_3,clue_4
+I0009,C2,axis only,The circle is not in column B and not in column D.,The circle is not in row 1 and not in row 4.,The circle is not in row 3.,The circle is not in column A.
+I0010,C3,axis only,The circle is not in column B.,The circle is not in column A and not in column D.,The circle is not in row 2.,The circle is not in row 1 and not in row 4.
+I0011,B4,middle four,The circle is not in row 1 and not in row 3.,The circle is not in the middle 4 boxes.,The circle is not in column C.,The circle is not in column A and not in column D.
+I0012,D3,middle four,The circle is not in row 4.,The circle is not in column A and not in column C.,The circle is not in row 1 and not in row 2.,The circle is not in the middle 4 boxes.
+I0013,D2,middle four,The circle is not in the middle 4 boxes.,The circle is not in row 3.,The circle is not in column A and not in column B.,The circle is not in row 1 and not in row 4.
+I0014,C4,both diagonals,The circle is not in row 1 and not in row 3.,The circle is not in column B.,The circle is not on either diagonal of the grid.,The circle is not in column A and not in column D.

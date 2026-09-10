@@ -1,0 +1,7 @@
+instance_id,human_order_position,has_region_clue,human_correct_percent,human_median_time_s,human_mean_attempts,model_sessions,model_solve_rate_percent,model_median_output_tokens,model_median_cells_named,model_enumeration_percent
+I0009,1,0,94.44,66.11,1.0,39,100.0,11,1,0.0
+I0010,2,0,94.44,37.97,1.056,39,100.0,11,1,0.0
+I0011,3,1,100.0,69.33,1.222,39,89.74,64,1,0.0
+I0012,4,1,100.0,108.64,1.444,39,97.44,66,1,0.0
+I0013,5,1,88.89,68.12,1.5,39,74.36,67,1,0.0
+I0014,6,1,94.44,108.04,1.5,37,64.86,78,1,0.0

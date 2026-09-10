@@ -1,0 +1,74 @@
+[
+  {
+    "file": "01_accuracy_by_effort.png",
+    "width": 3509,
+    "height": 1593,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "02_thinking_off_item_accuracy.png",
+    "width": 2974,
+    "height": 1554,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "03_output_token_distributions.png",
+    "width": 3493,
+    "height": 1749,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "04_visible_response_lengths.png",
+    "width": 3493,
+    "height": 1749,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "05_wall_latency_distributions.png",
+    "width": 3493,
+    "height": 1749,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "06_no_clue_response_distribution.png",
+    "width": 3493,
+    "height": 1605,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "07_low_high_resource_contrast.png",
+    "width": 3391,
+    "height": 1635,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  {
+    "file": "08_human_context.png",
+    "width": 3116,
+    "height": 1642,
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  }
+]

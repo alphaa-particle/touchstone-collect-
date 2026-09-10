@@ -1,0 +1,13 @@
+model,condition,n,median_primary_output_tokens,median_model_usage_output_tokens,rows_disagreeing,min_delta,max_delta,median_delta,median_thinking_delta
+haiku,thinking_off,30,377.5,393.0,30,11,17,16.0,0.0
+haiku,effort_low,30,873.0,889.0,30,11,20,16.0,0.0
+haiku,effort_high,30,891.5,907.5,30,11,16,16.0,0.0
+haiku,control_no_clues,30,2098.0,2113.5,30,11,19,15.0,0.0
+sonnet,thinking_off,30,84.5,84.5,0,0,0,0.0,0.0
+sonnet,effort_low,30,84.0,84.0,0,0,0,0.0,0.0
+sonnet,effort_high,30,115.5,115.5,0,0,0,0.0,0.0
+sonnet,control_no_clues,30,13.0,13.0,0,0,0,0.0,0.0
+opus,thinking_off,30,81.0,81.0,0,0,0,0.0,0.0
+opus,effort_low,30,53.0,53.0,0,0,0,0.0,0.0
+opus,effort_high,30,128.0,128.0,0,0,0,0.0,0.0
+opus,control_no_clues,30,52.0,52.0,0,0,0,0.0,0.0
