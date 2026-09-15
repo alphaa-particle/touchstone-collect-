@@ -2,11 +2,17 @@
 
 - Audience: technical/research manuscript readers.
 - Delivery mode: self-contained portable HTML.
-- Source workbook: `Rohan.xlsx`, worksheet `Supabase Snippet Untitled query`.
+- Source workbook: `Rohan.xlsx`, worksheet `Supabase Snippet Untitled query` (4 September 2026).
+- In-repo source since 15 September 2026: `analysis/data/human_trials_export_2026-09-04.csv`, the
+  same Supabase export as CSV. All 130 rows and every value match the workbook, and the 17 published
+  counts, medians and p values recompute from it without differences.
 - Snapshot period: 11–26 August 2026 UTC.
 - Data status: usable for exploratory paired analysis with material caveats.
 - Primary analysis grain: participant session.
-- Raw source handling: read-only; the workbook was not copied or modified.
+- Raw source handling: read-only; the export is never modified.
+- Not in this export: trial `notes` (which record reCAPTCHA checkbox-only passes), the `events`
+  table (submitted answers per attempt, `challenge_shown`), raw first-input timestamps and session
+  metadata. See `analysis/data/export_remaining_tables.sql`.
 
 ## Technical-report structure mapping
 

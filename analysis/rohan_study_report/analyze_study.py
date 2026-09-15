@@ -55,11 +55,29 @@ PROFILE_COLUMNS = [
 SEED = 20260904
 
 
+HERE = Path(__file__).resolve().parent
+# In-repo copy of the 4 September 2026 Supabase trial export. It is row-for-row identical to the
+# Rohan.xlsx workbook the committed outputs were first built from (verified 15 September 2026).
+DEFAULT_INPUT = HERE.parent / "data" / "human_trials_export_2026-09-04.csv"
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", required=True, type=Path, help="Source .xlsx file")
-    parser.add_argument("--output", required=True, type=Path, help="Derived-output directory")
+    parser.add_argument("--input", type=Path, default=DEFAULT_INPUT, help="Source export (.csv or .xlsx)")
+    parser.add_argument("--output", type=Path, default=HERE / "output", help="Derived-output directory")
     return parser.parse_args()
+
+
+def read_source(path: Path) -> pd.DataFrame:
+    """Read the trial export (CSV or Excel) and parse receipt times as UTC."""
+    if path.suffix.lower() in {".xlsx", ".xls"}:
+        df = pd.read_excel(path)
+    else:
+        df = pd.read_csv(path)
+    # Supabase writes UTC offsets as "+00"; make them explicit before strict ISO 8601 parsing.
+    received = df["received_at"].astype(str).str.replace(r"([+-]\d{2})$", r"\1:00", regex=True)
+    df["received_at"] = pd.to_datetime(received, utc=True, format="ISO8601")
+    return df
 
 
 def wilson(successes: int, total: int) -> tuple[float, float]:
@@ -123,8 +141,7 @@ def save_figure(fig: plt.Figure, output: Path, stem: str) -> None:
 def main() -> None:
     args = parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    df = pd.read_excel(args.input)
-    df["received_at"] = pd.to_datetime(df["received_at"], utc=True)
+    df = read_source(args.input)
 
     required = {
         "trial_pk", "participant_id", "session_id", "block_order", "condition",
@@ -496,7 +513,7 @@ def main() -> None:
     # Machine-readable summary used to populate and audit the report.
     result = {
         "source_file": args.input.name,
-        "source_sheet": "Supabase Snippet Untitled query",
+        "source_sheet": "Supabase Snippet Untitled query" if args.input.suffix.lower() in {".xlsx", ".xls"} else None,
         "collection_window_utc": [str(df["received_at"].min()), str(df["received_at"].max())],
         "raw_rows": raw_rows,
         "clean_unique_rows": len(clean),

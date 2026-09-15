@@ -1,179 +1,115 @@
 # Model benchmark — Claim D
 
-Measures what it costs a language model to solve the **same six band-2 grid-localisation
-items** the human screen-reader cohort solved: output tokens, wall-clock latency, attempts and
-dollars per successful solve, across Claude Haiku 4.5, Sonnet 5 and Opus 5.
+Measures how language models solve the **same six band-2 grid-localisation items** the
+screen-reader cohort solved. Every completed run used **subscription command-line tools, not a
+paid API**: Claude Code on a Claude subscription (Claude Haiku 4.5, Sonnet 5, Opus 5) and the Codex
+CLI on a ChatGPT subscription (GPT-5.6 Luna, Terra, Sol).
 
-Read **`MODEL_BENCHMARK_REPORT.md`** for the design, the human baseline, the results section,
-and the difficulties log. This file is just the runbook.
+**Start with [COMPARATIVE_BENCHMARK_REPORT.md](COMPARATIVE_BENCHMARK_REPORT.md).** It is the
+audited analysis of all 720 completed sessions, rebuilt offline from `output/` by the scripts in
+`publication/`. `MODEL_BENCHMARK_REPORT.md` is the earlier Claude-only report; it is superseded
+and kept for its difficulties log and the leakage incident in §8.16.
 
-For the completed cross-model analysis, read
-[COMPARATIVE_BENCHMARK_REPORT.md](COMPARATIVE_BENCHMARK_REPORT.md). It compares
-all 720 completed Claude/GPT subscription sessions, documents methodological
-limitations and sensitivity checks, and embeds eight PNG figures. Reproducible
-offline analysis scripts, aggregate data and figures are in `publication/`;
-Appendix C gives the commands. The comparative report distinguishes the measured
-subscription arms from the separate API design below.
+## What "cost" means here
+
+Subscriptions are not billed per call, so no exact dollar cost exists for any session. Two
+list-price equivalents can be computed from logged usage, at Haiku 4.5 $1/$5, Sonnet 5 $2/$10 and
+Opus 5 $5/$25 per million input/output tokens:
+
+| Estimate | How it is computed | All 360 Claude sessions |
+|---|---|---|
+| Upper bound | Claude Code's own `costUSD` in each session's `model_usage`, which includes the CLI's context overhead | ≈ $3.10 |
+| Lower bound | About 400 prompt tokens plus the measured output tokens, at list price | ≈ $1.38 |
+
+For each model's cheapest setting (Sonnet 5 at low effort, Haiku 4.5 with thinking off, Opus 5 at
+low effort) this brackets roughly $1.5–12 per 1,000 solves. Codex reports
+token counts but no cost: the 360 GPT sessions used 100,330 input and 32,477 output tokens, 28,650
+of them reasoning. Report any per-solve figure as a list-price equivalent, never as money spent.
 
 ## Run
 
-```bash
-cd touchstone-collect/analysis/model_benchmark
-python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
-
-.venv/bin/python items.py                       # verify items, re-derive every solution
-.venv/bin/python prompts.py                     # print every prompt, no API calls
-.venv/bin/python test_offline.py                # verify the harness offline, no key needed
-.venv/bin/python run_benchmark.py --dry-run     # plan + cost estimate, no API calls
-
-export ANTHROPIC_API_KEY=sk-ant-...             # or: ant auth login
-.venv/bin/python run_benchmark.py               # 270 sessions, approx. $3.36
-.venv/bin/python analyze_benchmark.py           # CSVs + splices results into the report
-```
-
-Requires Python >= 3.10 (the system 3.9 cannot install `anthropic` 1.x). This venv is separate
-from the human study's `.venv-analysis`.
-
-## Benchmark arms
-
-### GPT arm using the existing ChatGPT subscription
-
-The GPT equivalent of the **single-attempt Claude subscription arm** uses the
-installed Codex CLI and its existing ChatGPT login. It does not use an OpenAI API
-key. Defaults: GPT-5.6 Luna, Terra and Sol; `thinking_off` (`none`), `effort_low`,
-`effort_high`, and mandatory `control_no_clues`; six canonical items and five
-replicates = **360 independent conversations**. Practice is exported for fidelity
-checks but excluded from collection and every aggregate.
+Python 3.12 is used below; the collection and grading scripts need only the standard library.
 
 ```bash
 cd touchstone-collect/analysis/model_benchmark
-codex login status                        # must say Logged in using ChatGPT
-python3 prepare_gpt_inputs.py              # offline, explicit prompt-field export
-python3 test_gpt_offline.py                # no network/model calls
-python3 run_gpt_cli_arm.py --dry-run
-python3 run_gpt_cli_arm.py --workers 3      # audits first, then collects; resumable
-python3 grade_gpt_runs.py                  # offline grading after full collection
+python3.12 items.py            # verify items, re-derive every solution
+python3.12 prompts.py          # print every prompt, no model calls
 ```
 
-Only Python's standard library is required (including system Python 3.9).
-`--workers` defaults to 1; the execution above uses 3 concurrent CLI processes and
-records that fact in the manifest. `--models`, `--replicates`, `--inputs`, `--out`
-and `--preflight-only` are also available. Keep model/replicate/worker settings
-unchanged when resuming. Code, prompt, CLI-version or model-catalog changes require
-a new output path, so incompatible sessions cannot silently mix.
-
-Files are separate from the Claude results:
-
-- `gpt_inputs.json`: allowlisted prompt text and item identifiers; no answer fields.
-- `output/gpt_cli_arm_runs.manifest.json`: run plan, hashes, local wire audits and
-  subscription readiness probes for each model/effort.
-- `output/gpt_cli_arm_runs.jsonl`: blind submissions, raw CLI events, token usage,
-  latency and errors; no correctness or answer key.
-- `output/gpt_cli_arm_condition_summary.csv`, `gpt_cli_arm_item_summary.csv`,
-  `gpt_cli_arm_model_item_summary.csv`: offline metrics and human comparisons.
-- `output/gpt_cli_arm_diagnostics.json`, `gpt_cli_arm_tables.md`: integrity checks
-  and a separate report. The original Claude report and results are preserved.
-
-**GPT isolation:** preparation can inspect the source bundle, but never calls a
-model. Collection imports neither the item loader nor the grader and reads only
-the exported prompts. Each CLI call uses an empty temporary working directory,
-an ephemeral conversation, ignored user config/rules, no project instructions,
-and disabled skills, memories, hooks, plugins, apps, MCP and agents. A temporary
-model-catalog copy disables shell, patch, code execution and extra tool exposure;
-model identity and advertised reasoning levels are preserved. The benchmark base
-instructions replace the coding instructions. No session is resumed or forked,
-and no correctness feedback is sent.
-
-Before collecting puzzles, a localhost fixture inspects actual serialized
-requests and fails on any exposed tool (including Responses Lite
-`additional_tools`), extra context, altered model/effort, or conversation reuse.
-It sends only a synthetic `READY` prompt and does not forward to a model. Separate
-subscription probes confirm each setting is accepted. Real run event streams
-must contain exactly one completed turn, only text/reasoning items, and no tool
-events. Thinking off additionally requires an explicit **zero** reasoning-token
-counter; missing counters or silently enabled thinking are rejected.
-
-Grading requires complete coverage, unique conversations, matching prompt hashes,
-valid event streams and successful no-clues controls. The same 25% control ceiling
-as the Claude diagnostic is applied per model as well as pooled, and a failure
-actually aborts GPT table generation. Uniform guessing is 6.25%; the fixed-item
-control is a diagnostic, not a proof against training-data contamination.
-
-**Metric limits:** Codex exposes input, cached-input, total output and reasoning
-tokens. Input counts include CLI overhead. Only end-to-end CLI wall latency is
-available; API-only latency and dollar cost are blank rather than fabricated.
-Model IDs are configured/requested IDs validated in local request audits; CLI
-JSON does not supply an independent server-reported model identity. The local
-audit uses a fixture provider, not a capture of authenticated production traffic.
-Visible-answer strategy metrics do not describe hidden reasoning.
-
-Official references: [ChatGPT subscription authentication](https://learn.chatgpt.com/docs/auth)
-and [Codex configuration schema](https://developers.openai.com/codex/config-schema.json).
-
-### Existing Claude arms
-
-| Arm | Scripts | Needs | Measures | Does NOT measure |
-|---|---|---|---|---|
-| **API benchmark** (Claim D) | `run_benchmark.py` -> `analyze_benchmark.py` | Messages API key | tokens, **cost per solve**, all three conditions | — |
-| **Subscription arm** (blind) | `run_cli_arm.py` -> `grade_runs.py` | Claude subscription (Claude Code CLI) | solve rate, output/thinking tokens, reasoning strategy, item difficulty, latency | **input tokens, dollar cost** |
-
-The CLI ships 4k-26k cached input tokens of harness overhead per call, so it cannot price an
-attack. It can measure everything else — including the thinking-off floor, via
-`MAX_THINKING_TOKENS=0`.
+### Claude arm — Claude Code subscription
 
 ```bash
-# subscription arm - no API key needed
-.venv/bin/python run_cli_arm.py --dry-run
-.venv/bin/python run_cli_arm.py --conditions thinking_off effort_low effort_high control_no_clues --replicates 5
-.venv/bin/python grade_runs.py
+python3.12 run_cli_arm.py --dry-run
+python3.12 run_cli_arm.py --conditions thinking_off effort_low effort_high control_no_clues --replicates 5
+python3.12 grade_runs.py       # offline grading and integrity gates; writes the §6A tables
 ```
 
-## Leakage: read this before changing the CLI arm
+### GPT arm — ChatGPT subscription through the Codex CLI
 
-`--restricted` does **not** remove the file tools. An earlier version of this arm ran with `cwd`
-set to this directory, where `MODEL_BENCHMARK_REPORT.md` lists every item beside its solution -
-and a probe confirmed the model would read it and answer from the table. All results from that
-version were deleted. See report §8.16 and §6A.0.
+```bash
+codex login status             # must say Logged in using ChatGPT
+python3.12 prepare_gpt_inputs.py
+python3.12 test_gpt_offline.py # no network or model calls
+python3.12 run_gpt_cli_arm.py --dry-run
+python3.12 run_gpt_cli_arm.py --workers 3
+python3.12 grade_gpt_runs.py
+```
 
-Five defences now apply. Do not weaken any of them:
+Defaults: GPT-5.6 Luna, Terra and Sol; `thinking_off` (effort `none`), `effort_low`,
+`effort_high` and the mandatory `control_no_clues`; six canonical items × five replicates = 360
+conversations. Keep model, replicate and worker settings unchanged when resuming; code, prompt,
+CLI-version or model-catalog changes require a new output path.
 
-1. `--tools ""` - no built-in tools at all.
-2. A fresh **empty temp directory** as `cwd` for every call (no files, no CLAUDE.md).
-3. `--restricted --strict-mcp-config --max-turns 1`.
-4. **`run_cli_arm.py` holds no answers.** It never reads `.solution`. Grading is `grade_runs.py`,
-   run after collection. Keep that separation.
-5. **`control_no_clues`** - the same prompt with clues removed, so chance is 6.25%. `grade_runs.py`
-   aborts rather than producing tables if it rises materially above that, if any session shows
-   `num_turns != 1` or a permission denial, or if any row lacks `harness_version: 2`.
+### Rebuild the comparative report (offline, no model calls)
 
-Last measured control: **1/90 = 1.11%**, i.e. below chance. Run it with every future arm.
+```bash
+python3.12 -m venv .venv-publication
+.venv-publication/bin/python -m pip install -r publication/requirements.txt
+.venv-publication/bin/python publication/build_analysis.py
+.venv-publication/bin/python publication/build_manuscript.py
+.venv-publication/bin/python publication/validate_publication.py
+```
 
-## Useful flags
+## Isolation rules — do not weaken
 
-| Flag | Effect |
+An early version of the Claude arm ran from this directory, where the report lists every
+solution, and `--restricted` does not remove file tools. Those results were deleted (report §8.16).
+Every model arm must keep:
+
+1. **No tools**: `--tools ""` for Claude; tool-disabled model metadata for Codex.
+2. **A fresh empty temporary directory** as the working directory for every call.
+3. **Single-turn, isolated sessions**: `--restricted --strict-mcp-config --max-turns 1` for Claude;
+   ephemeral conversations with user config, skills, memories, plugins and MCP disabled for Codex.
+4. **Grading after collection only**, in `grade_runs.py` and `grade_gpt_runs.py`.
+5. **A no-clue control** in every arm. Its value is a diagnostic, not proof: models answer A1 almost
+   always, so balance target cells in any new item set.
+
+A future arm that deliberately gives the model tools (for example, to write its own solver) must
+run in an empty sandbox directory that contains no item bundle, report or grader.
+
+## Files
+
+| Path | Contents |
 |---|---|
-| `--dry-run` | Print the plan and a cost estimate. No API calls, no key needed. |
-| `--models claude-haiku-4-5` | Restrict the model set. |
-| `--conditions answer_only` | Restrict the conditions. |
-| `--replicates 20` | More replicates per cell. Needed for between-model claims. |
-| `--include-practice` | Also run `PRAC01`. Excluded from every aggregate either way. |
-| `--out path.jsonl` | Write elsewhere, e.g. for a pilot you intend to discard. |
+| `items.py` | Item loading, app-invariant checks, independent solver |
+| `prompts.py` | Verbatim prompt construction |
+| `run_cli_arm.py` / `grade_runs.py` | Claude Code subscription arm: blind collection, then offline grading |
+| `gpt_transport.py`, `gpt_wire_audit.py`, `prepare_gpt_inputs.py`, `run_gpt_cli_arm.py`, `grade_gpt_runs.py`, `test_gpt_offline.py`, `gpt_inputs.json` | Codex subscription arm |
+| `output/cli_arm_runs.jsonl`, `output/gpt_cli_arm_runs.jsonl` | The 723 retained session records (720 completed) |
+| `output/*_summary.csv`, `output/*_tables.md`, `output/gpt_cli_arm_runs.manifest.json`, `output/gpt_cli_arm_diagnostics.json` | Arm-level summaries, run manifest and integrity checks |
+| `publication/` | Offline re-analysis, 8 figures, audit hashes and validator |
+| `COMPARATIVE_BENCHMARK_REPORT.md` | Current manuscript draft |
+| `MODEL_BENCHMARK_REPORT.md` | Superseded Claude-only report |
 
-## Resume and cost safety
+## Removed on 15 September 2026
 
-`output/runs.jsonl` is appended and flushed per session. Re-running skips completed sessions and
-retries only those that recorded an error, so an interrupted or rate-limited run never re-spends
-on work already done.
+- `run_benchmark.py`, `analyze_benchmark.py`, `test_offline.py`, `requirements.txt` and `.venv/`:
+  a Messages API arm that was designed but never run.
+- `output/provisional_incomplete/`: summaries from an interrupted GPT collection, superseded by
+  the completed run.
 
-## Invariants
+Both are recoverable from git history, for example
+`git show 625197f:analysis/model_benchmark/run_benchmark.py`.
 
-- Items come from `../../data/instances.json` and are resolved by the same rules as
-  `lib/instances.ts`. `items.py` hard-fails on any mismatch.
-- Every solution is re-derived from the clue text by an independent solver, never read from the
-  bundle's `solution` field.
-- Prompts are byte-identical to what `app/run/[token]/Runner.tsx` rendered. Run `prompts.py` to
-  audit that without spending a token.
-- Prompt caching is never enabled; a cache read would understate attacker cost. `diagnostics.csv`
-  counts any leak.
-- No participant data is read or written anywhere in this directory.
-- Nothing here is ever pointed at a live third-party CAPTCHA. Prototype items only.
+Nothing here reads or writes participant data beyond the aggregate human files in
+`../rohan_study_report/output/`, and nothing is ever pointed at a live third-party CAPTCHA.

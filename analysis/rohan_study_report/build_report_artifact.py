@@ -158,8 +158,8 @@ analysis_source = {
 }
 workbook_source = {
     "id": "source_workbook",
-    "label": "Supabase merged study export",
-    "path": "Rohan.xlsx",
+    "label": "Supabase merged study export (CSV; identical to the original Rohan.xlsx workbook)",
+    "path": "analysis/data/human_trials_export_2026-09-04.csv",
 }
 application_source = {
     "id": "application_protocol",

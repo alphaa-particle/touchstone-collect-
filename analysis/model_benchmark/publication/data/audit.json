@@ -38,7 +38,7 @@
     "lib/instances.ts": "ab6b22e5af11e75af5e6015613ad2bb3d48652a41f68c81e7c5d0d938239e95d",
     "app/api/trial/route.ts": "9344a8fabac5adecd22125f3c964cbc2caa3e7cc18e785b1a1a848667d37d307",
     "analysis/model_benchmark/publication/build_analysis.py": "cdba639ea39c5336f800732547ddbb06545b1db2ed9de9d1d140fa360a015fc7",
-    "analysis/model_benchmark/publication/build_manuscript.py": "307871dbb65589117639366dbf71644e2af1709e7a84981aae013ef34681fd9a",
+    "analysis/model_benchmark/publication/build_manuscript.py": "e4d3e123f85511d501a6048b21263ab012ab99cb729bff3162d6c579c8b5e3dd",
     "analysis/model_benchmark/publication/requirements.txt": "050e5bdb1aa3fabfeb70dc575c435823433f46f6928a6c1f330859119e495634"
   },
   "gpt_manifest_id": "aa921ccf922b954acd2b9c9a79a10610393d7d7e5ffe8173ddc2091257012c26",

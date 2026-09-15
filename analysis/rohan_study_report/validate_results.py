@@ -8,8 +8,9 @@ import json
 from pathlib import Path
 
 import nbformat
-import pandas as pd
 from scipy.stats import binomtest
+
+from analyze_study import DEFAULT_INPUT, read_source
 
 
 GRID = "touchstone_grid"
@@ -18,13 +19,12 @@ BASELINE = "audio_captcha_baseline"
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", required=True, type=Path)
-    parser.add_argument("--analysis-dir", required=True, type=Path)
+    parser.add_argument("--input", type=Path, default=DEFAULT_INPUT, help="Source export (.csv or .xlsx)")
+    parser.add_argument("--analysis-dir", type=Path, default=Path(__file__).resolve().parent)
     args = parser.parse_args()
     output = args.analysis_dir / "output"
 
-    raw = pd.read_excel(args.input)
-    raw["received_at"] = pd.to_datetime(raw["received_at"], utc=True)
+    raw = read_source(args.input)
     clean = raw.sort_values("received_at").drop_duplicates(
         ["session_id", "condition", "item_index"], keep="first"
     )

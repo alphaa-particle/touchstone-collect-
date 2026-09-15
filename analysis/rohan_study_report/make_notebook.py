@@ -19,7 +19,7 @@ nb["cells"] = [
         "# Blind-user CAPTCHA study: reproducible analysis\n\n"
         "This notebook executes the checked analysis script, then displays the exact "
         "cohort, quality, inferential, and figure outputs used in the technical report. "
-        "The Excel source is read-only."
+        "The CSV export is read-only."
     ),
     nbf.v4.new_code_cell(
         "from pathlib import Path\n"
@@ -27,10 +27,10 @@ nb["cells"] = [
         "import pandas as pd\n"
         "from IPython.display import Image, display\n\n"
         f"PROJECT_ROOT = Path({str(ROOT)!r})\n"
-        "INPUT = Path('/Users/vaibhav_joshi/Downloads/Rohan.xlsx')\n"
+        "INPUT = PROJECT_ROOT / 'analysis/data/human_trials_export_2026-09-04.csv'\n"
         "ANALYSIS_DIR = PROJECT_ROOT / 'analysis/rohan_study_report'\n"
         "OUTPUT = ANALYSIS_DIR / 'output'\n"
-        "assert INPUT.exists(), 'Update INPUT to the location of Rohan.xlsx'\n"
+        "assert INPUT.exists(), 'Missing analysis/data/human_trials_export_2026-09-04.csv (see analysis/data/README.md)'\n"
         "OUTPUT.mkdir(parents=True, exist_ok=True)"
     ),
     nbf.v4.new_markdown_cell(

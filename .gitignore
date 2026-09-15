@@ -3,7 +3,13 @@ node_modules/
 .vercel/
 *.tsbuildinfo
 next-env.d.ts
+.DS_Store
 
 # Secrets, and the one file that could link a token to a person.
 .env*.local
 tokens.txt
+
+# Local analysis environment, and raw participant-level exports (kept out of the
+# GitHub repository until the team confirms consent covers release).
+.venv-analysis/
+analysis/data/*.csv

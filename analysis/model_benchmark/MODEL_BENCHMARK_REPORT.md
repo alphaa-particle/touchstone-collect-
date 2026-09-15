@@ -2,6 +2,18 @@
 
 **Project Touchstone · Claim D (model cost benchmark) · reasoning-CAPTCHA family: negative-constraint grid localisation**
 
+> **Status, 15 September 2026: superseded.** Read
+> [COMPARATIVE_BENCHMARK_REPORT.md](COMPARATIVE_BENCHMARK_REPORT.md) instead. It re-grades all 720
+> Claude and GPT subscription sessions and corrects several interpretations made here — for
+> example, execution time is not "deduction time", and the Claude runner process did load
+> solutions even though no prompt contained them. The Messages API arm described in §3–§6 and
+> parts of §8 was designed but never run; its code (`run_benchmark.py`, `analyze_benchmark.py`,
+> `test_offline.py`) was removed from the repository on this date. Every model result in this
+> project came from subscription command-line tools, so no per-call bill exists and cost can only
+> be stated as a list-price equivalent of logged token usage (see `README.md`). This file is kept
+> for the leakage incident (§8.16) and the other difficulties recorded while building the harness,
+> and because `grade_runs.py` still writes the §6A tables into it.
+
 Analysis directory: `touchstone-collect/analysis/model_benchmark/`
 Item source: `touchstone-collect/data/instances.json` (`grid_localisation@2.0.0`)
 Human reference: `touchstone-collect/analysis/rohan_study_report/output/`
